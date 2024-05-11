@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  my_service:
+    image: moressoft:latest
+    ports:
+      - "5000:8080"
+      - "5001:8081"
+    volumes:
+      - /root/piranhacms/moressoft.ir/docker/wwwroot:/app/wwwroot:rw
+      - /root/piranhacms/moressoft.ir/docker/piranha.db:/app/piranha.db:rw
+    restart: always
